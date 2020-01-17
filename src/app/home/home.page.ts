@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+    items = ['Foo', 'Bar', 'Fooooo', 'Baaaaaar', 'Whatttt'];
+    constructor() {}
 
+
+    pageItems() {
+
+    }
 }

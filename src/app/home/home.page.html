@@ -11,4 +11,24 @@
     The world is your oyster.
     <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
   </div>
+
+  <div class="movie-list-container now-showing">
+    <div class="scroll-wrapper"
+        infinite-scroll
+        [infiniteScrollDistance]="2"
+        [infiniteScrollUpDistance]="2"
+        [infiniteScrollThrottle]="300"
+        [horizontal]="true"
+        [scrollWindow]="false"
+        (scrolled)="pageItems()">
+        <div class="scroll-zoom-wrapper">
+            <div *ngFor="let item of items" class="scroll-item">
+                <item [item]="item"></item>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
 </ion-content>

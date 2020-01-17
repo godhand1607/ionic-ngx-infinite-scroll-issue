@@ -6,6 +6,10 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
+import { ItemComponent } from './item.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,8 +20,9 @@ import { HomePage } from './home.page';
         path: '',
         component: HomePage
       }
-    ])
+    ]),
+    InfiniteScrollModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, ItemComponent]
 })
 export class HomePageModule {}
